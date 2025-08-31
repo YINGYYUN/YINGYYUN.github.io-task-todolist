@@ -1,0 +1,219 @@
+/*
+CSS注释示例
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body {
+    height: 100%; /* 114514: 确保html和body元素占据整个高度 */
+}
+
+html{
+    background-color:aliceblue;
+}
+
+body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    /* 114514: 为整个body区域添加背景图片和白色蒙版 */
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.85), 
+                       rgba(255, 255, 255, 0.85)), 
+        url('../images/body.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* 114514: 固定背景，滚动时不动 */
+}
+
+h1{
+    margin: 0;
+    color:black;
+    background-color: white;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%; /* 114514: 确保标题宽度填满 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 114514: 添加轻微阴影 */
+}
+
+h2{
+    margin: 0;
+    color: black;
+    background-color: white;
+    text-align: center;
+    padding-bottom: 15px;
+    width: 100%; /* 114514: 确保标题宽度填满 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 114514: 添加轻微阴影 */
+    margin-bottom: 20px; /* 114514: 添加底部外边距 */
+}
+
+.container{
+    line-height: 1.6;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin: 5px;
+    /* 114514: 为容器添加第二个背景图片和白色蒙版 */
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.8), 
+                       rgba(255, 255, 255, 0.8)), 
+        url('../images/container.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* 114514: 加深阴影提升层次感 */
+}
+
+.input-section{
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+#taskInput{
+    flex: 1;
+    padding: 10px 14px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.9); /* 114514: 添加半透明背景 */
+}
+
+#taskInput:focus{
+    border-color:#4263eb;
+    outline: none;
+}
+
+#tasksContainer{
+    padding: 10px 20px;
+    max-height: 400px;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.task-item{
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #e9ecef;
+    animation: fadeIn 0.3s;
+}
+
+.task-item:last-child{
+    border-bottom: none;
+}
+
+#addBtn{
+    background: #4263eb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#addBtn:hover {
+    background: #3b5bdb;
+}
+
+.task-text{
+    flex: 1;
+    margin: 0 15px;
+    word-break: break-word;
+    font-size: 16px;
+}
+
+.completed .task-text{
+    text-decoration: line-through;
+    color: #868e96;
+}
+
+.task-btn{
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.task-btn:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.complete-btn{
+    color: #2fb344;
+}
+
+.delete-btn{
+    color: #fa5252;
+}
+
+.empty-state{
+    text-align: center;
+    padding: 40px 20px;
+    color: #868e96;
+    font-style: italic;
+}
+
+.stats{
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    width: 100%;
+    border-top: 1px solid #ddd;
+    margin-top: 10px;
+    color: #495057;
+    font-weight: 500;
+    background-color: rgba(255, 255, 255, 0.7); /* 114514: 添加半透明背景 */
+    border-radius: 0 0 8px 8px; /* 114514: 圆角底部 */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* 114514: 添加响应式设计 */
+@media (max-width: 600px) {
+    body {
+        padding: 10px; /* 114514: 减少内边距 */
+    }
+    
+    .container {
+        padding: 15px;
+    }
+    
+    .input-section {
+        flex-direction: column;
+    }
+    
+    #addBtn {
+        width: 100%;
+    }
+    
+    h1, h2 {
+        padding: 10px 0; /* 114514: 调整标题内边距 */
+    }
+}

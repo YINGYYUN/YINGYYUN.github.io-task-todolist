@@ -1,0 +1,44 @@
+<!--html注释示例-->
+
+<!DOCTYPE html>
+<html lang="zh.CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK:todolist</title>
+    <link href="styles/style.css" rel="stylesheet"/>
+
+</head>
+<body>
+        <h1>DO It</h1>
+        <h2>Just DO It ! ! !</h2>
+
+    <div class="container" id="container">
+        <!-- 输入区域，用于添加新任务 -->
+        <div class="input-section">
+            <!-- 文本输入框，用于输入任务内容 -->
+            <input type="text" id="taskInput" placeholder="做些什么好呢...">
+            <!-- 添加任务按钮 -->
+            <button id="addBtn">添加</button>
+        </div>
+        
+        <!-- 任务列表容器 -->
+        <div class="tasks-container" id="tasksContainer">
+            <!-- 空状态提示，当没有任务时显示 -->
+            <div class="empty-state" id="emptyState">
+                <p>这里什么都没有哦</p>
+            </div>
+            <!-- 任务项将通过JavaScript动态添加到这里 -->
+        </div>
+        
+        <!-- 统计信息区域 -->
+        <div class="stats">
+            <!-- 显示总任务数 -->
+            <span id="totalTasks">总任务: 0</span>
+            <!-- 显示已完成任务数 -->
+            <span id="completedTasks">已完成: 0</span>
+        </div>
+    </div>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
